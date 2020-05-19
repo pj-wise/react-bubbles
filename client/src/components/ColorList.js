@@ -38,9 +38,7 @@ const ColorList = ({ colors, updateColors, history }) => {
 
   const saveEdit = (e) => {
     e.preventDefault();
-    // Make a put request to save your updated color
-    // think about where will you get the id from...
-    // where is is saved right now?
+
     axiosWithAuth()
       .put(`http://localhost:5000/api/colors/${colorToEdit.id}`, colorToEdit)
       .then((res) => {
@@ -61,7 +59,7 @@ const ColorList = ({ colors, updateColors, history }) => {
   const modal = (color) => {
     confirmAlert({
       title: 'Confirm Deletion',
-      message: 'Are you sure you want to delete this?',
+      message: 'Are you sure you want to delete this color?',
       buttons: [
         { label: 'Yes', onClick: () => deleteColor(color) },
         {
