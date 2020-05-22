@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 
 html,
 body,
@@ -11,12 +12,68 @@ body,
 }
 
 .App {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   display: flex;
 
   svg {
     height: 100%;
+  }
+}
+
+.loginFormWrap {
+  margin: 0 auto;
+  // background: rgb(2, 0, 36);
+  // background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 121, 0.9514180672268907) 50%, rgba(0, 212, 255, 1) 85%);
+  background: rgb(0, 36, 35);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 36, 35, 1) 0%,
+    rgba(9, 80, 121, 0.9626225490196079) 51%,
+    rgba(229, 0, 255, 0.9990371148459384) 100%
+  );
+  width: 100%;
+
+  .loginForm {
+    margin: 2rem auto;
+    width: 25%;
+
+    input {
+      margin: 0 auto;
+      height: 1.5rem;
+      padding: 8px;
+      border-radius: 20px;
+      width: 90%;
+      margin-bottom: 1rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid white;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    button {
+      margin: 0 auto;
+      height: 2rem;
+      border-radius: 20px;
+      width: 94%;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0);
+      }
+    }
+  }
+
+  h1 {
+    font-family: 'Rammetto One', cursive;
+    font-size: 8rem;
+    color: white;
   }
 }
 
